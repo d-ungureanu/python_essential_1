@@ -25,7 +25,10 @@ for i in range(num_of_emp):
         last_name = input("Please enter a valid last name: ").capitalize()
 
     # capture age, cast it to integer and check it is in 18 to 100 range
-    age = int(input("Please enter the employee's age: "))
+    age_str = input("Please enter the employee's age: ")
+    while not age_str.isdigit():
+        age_str = input("Please enter age as a number: ")
+    age = int(age_str)
     while (age < 18) or (age > 100):
         age = int(input("Please enter an age in the 18 to 100 range: "))
 
