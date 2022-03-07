@@ -1,5 +1,7 @@
 # variable to capture number of employees as string
 number_of_employees_str = input("Please enter the number of employees: ")
+if not number_of_employees_str.isdigit():
+    number_of_employees_str = input("Please enter a valid number of employees: ")
 
 # var to save number of employees as integer
 num_of_emp = int(number_of_employees_str)
