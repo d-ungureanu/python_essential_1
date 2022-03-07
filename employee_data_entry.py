@@ -15,14 +15,14 @@ sum_of_ages = 0
 # loop to capture all employees details
 for i in range(num_of_emp):
     # capture first name and check it is not empty
-    first_name = input("Please enter the first name: ")
+    first_name = input("Please enter the first name: ").capitalize()
     while len(first_name) == 0:
-        first_name = input("Please enter a valid first name: ")
+        first_name = input("Please enter a valid first name: ").capitalize()
 
     # capture last name and check it is not empty
-    last_name = input("Please enter the last name: ")
+    last_name = input("Please enter the last name: ").capitalize()
     while len(last_name) == 0:
-        last_name = input("Please enter a valid last name: ")
+        last_name = input("Please enter a valid last name: ").capitalize()
 
     # capture age, cast it to integer and check it is in 18 to 100 range
     age = int(input("Please enter the employee's age: "))
