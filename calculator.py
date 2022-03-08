@@ -34,9 +34,9 @@ def numbers_op(op_sign, a, b):
 
 
 def read_operation():
-    allowed_operations = ["+", "-", "*", "\\", "quit"]
+    allowed_operations = ["+", "-", "*", "/", "quit"]
     while True:
-        operation = input("Please enter any of the following operations +, -, *, / : ")
+        operation = input("Please enter any of the following operations +, -, *, /, quit : ")
         if operation in allowed_operations:
             return operation
         else:
