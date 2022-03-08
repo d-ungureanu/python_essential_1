@@ -1,21 +1,14 @@
-def read_first_number():
-    while True:
-        first_number_str = input("Please enter the first number: ")
-        if first_number_str.isdigit():
-            first_number = int(first_number_str)
-            return first_number
-        else:
-            print("Please enter a number.")
+# Calculator for basic Math operations
+# Sum, Subtract, Multiply, Divide
 
-
-def read_second_number():
+def read_number():
     while True:
-        second_number_str = input("Please enter the second number: ")
+        second_number_str = input("Please enter a number: ")
         if second_number_str.isdigit():
             second_number = int(second_number_str)
             return second_number
         else:
-            print("Please enter a number.")
+            print("Please enter a valid number.")
 
 
 def numbers_sum(a, b):
@@ -66,8 +59,8 @@ if __name__ == '__main__':
         if op.lower() == "quit":
             print("\nExiting calculator...")
             break
-        num1 = read_first_number()
-        num2 = read_second_number()
+        num1 = read_number()
+        num2 = read_number()
         if op == "/" and num2 == 0:
             print("Division by zero not possible!")
         else:
