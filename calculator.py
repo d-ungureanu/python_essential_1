@@ -5,7 +5,7 @@ def read_first_number():
             first_number = int(first_number_str)
             return first_number
         else:
-            print("Please enter a valid first number: ")
+            print("Please enter a number.")
 
 
 def read_second_number():
@@ -15,19 +15,35 @@ def read_second_number():
             second_number = int(second_number_str)
             return second_number
         else:
-            print("Please enter a valid second number: ")
+            print("Please enter a number.")
+
+
+def numbers_sum(a, b):
+    return a + b
+
+
+def numbers_sub(a, b):
+    return a - b
+
+
+def numbers_mul(a, b):
+    return a * b
+
+
+def numbers_div(a, b):
+    return a / b
 
 
 def numbers_op(op_sign, a, b):
     result = 0
     if op_sign == "+":
-        result = a + b
+        result = numbers_sum(a, b)
     elif op_sign == "-":
-        result = a - b
+        result = numbers_sub(a, b)
     elif op_sign == "*":
-        result = a * b
+        result = numbers_mul(a, b)
     elif op_sign == "/":
-        result = a / b
+        result = numbers_div(a, b)
     else:
         print("Unknown operation!")
     return result
