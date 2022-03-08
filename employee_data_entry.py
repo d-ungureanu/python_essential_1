@@ -9,7 +9,7 @@ num_of_emp = int(number_of_employees_str)
 # variable to save employees details
 list_of_employees = {}
 
-# variable to sae the sum of all ages
+# variable to save the sum of all ages
 sum_of_ages = 0
 
 # loop to capture all employees details
