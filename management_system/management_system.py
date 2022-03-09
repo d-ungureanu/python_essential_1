@@ -1,9 +1,8 @@
-import employees
+import employees_details
+import choice_selection
 
 if __name__ == '__main__':
     print("This is the management_system.py")
-    employees.read_firstname()
-    employees.read_lastname()
-    employees.read_birth_yeah()
-    employees.read_birth_month()
-    employees.read_birth_day()
+    while True:
+        choice_selection.select_option()
+        break
