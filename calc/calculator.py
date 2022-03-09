@@ -1,3 +1,4 @@
+#! python3
 # Calculator for basic Math operations
 # Sum, Subtract, Multiply, Divide
 
