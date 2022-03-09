@@ -3,7 +3,7 @@
 
 
 <h3>1. Requirements for employee_data</h3>
-<p>- Create a new repository for python_essential_1
+<p>- Create a new repository for python_essential_1<br>
 - Clone this repository on your machine<br>
 - Create python project inside the repository<br>
 - The app (Employee Data Entry) should do the following:<br>
@@ -18,8 +18,8 @@
 - All variables should have meaningful names<br>
 - Push multiple commits to the repository</p>
 
-<h3>2. Requirements for calculator</h3>
-    Create a basic calculator with 4 basic mathematical operations: addition, subtraction, multiplication, division
-    User should input 2 numbers (check they are valid numbers)
-    User should be able to choose desired operation
-    Calculator should run until user inputs trigger to stop it
+<p><h3>2. Requirements for calculator</h3>
+Create a basic calculator with 4 basic mathematical operations: addition, subtraction, multiplication, division<br>
+User should input 2 numbers (check they are valid numbers)<br>
+User should be able to choose desired operation<br>
+Calculator should run until user inputs trigger to stop it</p>
