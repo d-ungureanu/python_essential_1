@@ -23,3 +23,26 @@ Create a basic calculator with 4 basic mathematical operations: addition, subtra
 User should input 2 numbers (check they are valid numbers)<br>
 User should be able to choose desired operation<br>
 Calculator should run until user inputs trigger to stop it</p>
+
+<p><h3>Employee Management System</h3>
+<p>The objective of this exercise is to practice working with: functions, while/for loops, dictionary, list and input validation.</p>
+Requirements<br>
+1- A company needs a system to manage the data of its employee.<br>
+2- Each employee has the following information:<br>
+- Employee ID (int)<br>
+- First name (string: minimum 2 Characters)<br>
+- Last Name (string: minimum 2 Characters)<br>
+- Birth Year (int between 1900 and 2004)<br>
+- Birth Month (int between 1 and 12)<br>
+- Birth Day (int between 1 and 31)<br>
+- Position (string)<br>
+- Whether graduated from the university or not (boolean)<br>
+3- The system's user should be able to perform any of the following tasks:<br>
+- Add an Employee<br>
+- Remove an Employee<br>
+- Get the total number of Employees<br>
+- Get a List of Employees<br>
+- Retrieve the data of an employee (By ID)<br>
+- Update employee's data<br>
+- Exit<br>
+4- The app should run in a loop that shows a list of options to the user<br></p>
