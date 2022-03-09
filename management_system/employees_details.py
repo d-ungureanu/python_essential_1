@@ -161,9 +161,9 @@ def remove_employee():
     if rem_id_str.isdigit() and int(rem_id_str) in employees_db:
         rem_id = int(rem_id_str)
         del employees_db[int(rem_id)]
+        print("\n _______________________________________________________")
         print(f"Employee with ID {rem_id} has been removed from database.")
-        print("Database hold now the following entries:")
-        print(employees_db)
+        print(" _______________________________________________________")
 
 
 def update_employee():
@@ -205,3 +205,6 @@ def update_employee():
             mod_str = "graduated"
             mod_data = read_graduation()
         employees_db[mod_id][mod_str] = mod_data
+        print("____________________________________________________________________________")
+        print(f"Field {mod_str} for entry with ID: {mod_id}, had been changed to {mod_data}.")
+        print("____________________________________________________________________________")
