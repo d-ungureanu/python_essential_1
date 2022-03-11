@@ -17,15 +17,16 @@ Please choose your desired option:
  Your choice is: """)
         if selection in allowed_options:
             if selection == "add":
-                employee_details_oop.add_employee()
+                management_operations.add_employee()
             elif selection == "rem":
-                employee_details_oop.remove_employee()
+                management_operations.remove_employee()
             elif selection == "mod":
-                employee_details_oop.update_employee()
+                management_operations.update_employee()
             elif selection == "list":
                 print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-                for entry in management_operations.employees_db.keys():
-                    print(management_operations.employees_db[entry])
+                # for entry in management_operations.employees_db.keys():
+                #     print(management_operations.employees_db[entry])
+                management_operations.print_employee_db()
                 print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
             elif selection == "size":
                 print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")

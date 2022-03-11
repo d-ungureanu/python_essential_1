@@ -1,41 +1,8 @@
 from employee_details_oop import Employee
 
-
 # File that handles employees details
+employees_db = {}
 employees_counter = 0
-# employees_db = {}
-employees_db = {
-    1: {
-        "firstname": "Daniel",
-        "lastname": "Ungureanu",
-        "day": 21,
-        "month": 3,
-        "year": 1988,
-        "position": "Support",
-        "graduated": True,
-        "id": 1
-    },
-    2: {
-        "firstname": "John",
-        "lastname": "Doe",
-        "day": 11,
-        "month": 1,
-        "year": 1984,
-        "position": "Listener",
-        "graduated": False,
-        "id": 2
-    },
-    3: {
-        "firstname": "Jane",
-        "lastname": "Doe",
-        "day": 31,
-        "month": 6,
-        "year": 1991,
-        "position": "Spender",
-        "graduated": True,
-        "id": 3
-    }
-}
 
 
 def read_firstname():
@@ -135,7 +102,7 @@ def read_employee_details():
     dob_year = read_birth_yeah()
     position = read_position()
     grad = read_graduation()
-    employee = Employee(firstname, lastname, dob_day, dob_month, dob_year, position, grad)
+    employee = Employee(firstname, lastname, dob_day, dob_month, dob_year, position, grad, employees_counter)
     return employee
 
 
@@ -143,7 +110,7 @@ def add_employee():
     global employees_db
     global employees_counter
     employee = read_employee_details()
-    employees_db[employees_counter] = employee
+    employees_db[employee.get_ids()] = employee
     print(" __________________________________________________________________")
     print("| Employee added successfully, to check database use 'list' option. |")
     print(" __________________________________________________________________")
@@ -158,6 +125,12 @@ def remove_employee():
         print("\n _______________________________________________________")
         print(f"Employee with ID {rem_id} has been removed from database.")
         print(" _______________________________________________________")
+
+
+def print_employee_db():
+    global employees_db
+    for entry in employees_db:
+        print(employees_db[entry])
 
 
 def update_employee():
@@ -179,26 +152,32 @@ def update_employee():
         mod_id = int(mod_id_str)
         if mod_option == "1":
             mod_str = "firstname"
-            mod_data = read_firstname()
+            new_data = read_firstname()
+            employees_db[mod_id].set_first_name(new_data)
         elif mod_option == "2":
             mod_str = "lastname"
-            mod_data = read_lastname()
+            new_data = read_lastname()
+            employees_db[mod_id].set_last_name(new_data)
         elif mod_option == "3":
             mod_str = "day"
-            mod_data = read_birth_day()
+            new_data = read_birth_day()
+            employees_db[mod_id].set_birth_day(new_data)
         elif mod_option == "4":
             mod_str = "month"
-            mod_data = read_birth_month()
+            new_data = read_birth_month()
+            employees_db[mod_id].set_birth_month(new_data)
         elif mod_option == "5":
             mod_str = "year"
-            mod_data = read_birth_yeah()
+            new_data = read_birth_yeah()
+            employees_db[mod_id].set_birth_year(new_data)
         elif mod_option == "6":
             mod_str = "position"
-            mod_data = read_position()
+            new_data = read_position()
+            employees_db[mod_id].set_position(new_data)
         elif mod_option == "7":
             mod_str = "graduated"
-            mod_data = read_graduation()
-        employees_db[mod_id][mod_str] = mod_data
+            new_data = read_graduation()
+            employees_db[mod_id].set_graduation(new_data)
         print("____________________________________________________________________________")
-        print(f"Field {mod_str} for entry with ID: {mod_id}, had been changed to {mod_data}.")
+        print(f"Field {mod_str} for entry with ID: {mod_id}, had been changed to {new_data}.")
         print("____________________________________________________________________________")
