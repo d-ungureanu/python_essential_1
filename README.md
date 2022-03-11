@@ -18,13 +18,13 @@
 - All variables should have meaningful names<br>
 - Push multiple commits to the repository</p>
 
-<p><h3>**2. Requirements for calculator**</h3>
-Create a basic calculator with 4 basic mathematical operations: addition, subtraction, multiplication, division<br>
+<h3>**2. Requirements for calculator**</h3>
+<p>Create a basic calculator with 4 basic mathematical operations: addition, subtraction, multiplication, division<br>
 User should input 2 numbers (check they are valid numbers)<br>
 User should be able to choose desired operation<br>
 Calculator should run until user inputs trigger to stop it</p>
 
-<p><h3>**3. Employee Management System**</h3>
+<h3>**3. Employee Management System**</h3>
 <p>The objective of this exercise is to practice working with: functions, while/for loops, dictionary, list and input validation.</p>
 Requirements<br>
 1- A company needs a system to manage the data of its employee.<br>
@@ -47,5 +47,5 @@ Requirements<br>
 - Exit<br>
 4- The app should run in a loop that shows a list of options to the user<br></p>
 
-<p><h3>**4. Employee Management System using OOP**</h3>
+<h3>**4. Employee Management System using OOP**</h3>
 <p>The objective of this exercise is to refactor solution for exercise 3 using OOP.</p>
