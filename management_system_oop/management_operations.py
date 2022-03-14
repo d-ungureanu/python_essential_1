@@ -129,8 +129,10 @@ def remove_employee():
 
 def print_employee_db():
     global employees_db
+    print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     for entry in employees_db:
         print(employees_db[entry])
+    print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
 
 def update_employee():

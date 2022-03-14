@@ -1,4 +1,3 @@
-import employee_details_oop
 import management_operations
 
 
@@ -23,11 +22,7 @@ Please choose your desired option:
             elif selection == "mod":
                 management_operations.update_employee()
             elif selection == "list":
-                print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-                # for entry in management_operations.employees_db.keys():
-                #     print(management_operations.employees_db[entry])
                 management_operations.print_employee_db()
-                print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
             elif selection == "size":
                 print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
                 print(f"The database holds {len(management_operations.employees_db)} entries.")
