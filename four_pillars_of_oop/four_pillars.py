@@ -24,7 +24,8 @@ class Device:
 
 class MobileDevice(Device):
     def __init__(self, brand_n, model_n, screen_s):
-        super().__init__(brand_n, model_n)
+        # super().__init__(brand_n, model_n)
+        Device.__init__(self, brand_n, model_n)
         self.screen_size = screen_s
 
     def __str__(self):
@@ -42,7 +43,7 @@ class MobileDevice(Device):
 
 class SmartWatch(MobileDevice):
     def __init__(self, brand_n, model_n, screen_s, mem_s):
-        super().__init__(brand_n, model_n, screen_s)
+        MobileDevice.__init__(self, brand_n, model_n, screen_s)
         self.memory_size = mem_s
 
     def __str__(self):
