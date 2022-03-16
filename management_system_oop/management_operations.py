@@ -1,8 +1,10 @@
 from employee_details_oop import Employee
+import logger
 
 # File that handles employees details
 employees_db = {}
 employees_counter = 0
+logger.create_log_file()
 
 
 def read_firstname():
@@ -111,6 +113,7 @@ def add_employee():
     global employees_counter
     employee = read_employee_details()
     employees_db[employee.get_ids()] = employee
+    logger.update_log_file(f"Employee with ID: {employee.get_ids()} was added to DB.")
     print(" __________________________________________________________________")
     print("| Employee added successfully, to check database use 'list' option. |")
     print(" __________________________________________________________________")
@@ -122,9 +125,11 @@ def remove_employee():
     if rem_id_str.isdigit() and int(rem_id_str) in employees_db:
         rem_id = int(rem_id_str)
         del employees_db[int(rem_id)]
+        delete_msg = f"Employee with ID {rem_id} has been removed from database."
         print("\n _______________________________________________________")
-        print(f"Employee with ID {rem_id} has been removed from database.")
+        print(delete_msg)
         print(" _______________________________________________________")
+        logger.update_log_file(delete_msg)
 
 
 def print_employee_db():
@@ -133,6 +138,7 @@ def print_employee_db():
     for entry in employees_db:
         print(employees_db[entry])
     print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    logger.update_log_file("Employees DB has been listed.")
 
 
 def update_employee():
@@ -180,6 +186,25 @@ def update_employee():
             mod_str = "graduated"
             new_data = read_graduation()
             employees_db[mod_id].set_graduation(new_data)
+        update_msg = f"Field {mod_str} for entry with ID: {mod_id}, had been changed to {new_data}."
         print("____________________________________________________________________________")
-        print(f"Field {mod_str} for entry with ID: {mod_id}, had been changed to {new_data}.")
+        print(update_msg)
         print("____________________________________________________________________________")
+        logger.update_log_file(update_msg)
+
+
+def print_employee_db_size():
+    global employees_db
+    db_size_msg = f"The database holds {len(employees_db)} entries."
+    print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print(db_size_msg)
+    print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    logger.update_log_file(db_size_msg)
+
+
+def print_id_details():
+    global employees_db
+    display_id = input("Please enter the ID you want to display: ")
+    if display_id.isdigit() and int(display_id) in employees_db.keys():
+        print(employees_db[int(display_id)])
+        logger.update_log_file(f"Details for employee with ID: {display_id} have been displayed.")

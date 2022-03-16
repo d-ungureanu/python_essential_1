@@ -1,4 +1,5 @@
 import management_operations
+import logger
 
 
 def select_option():
@@ -24,13 +25,9 @@ Please choose your desired option:
             elif selection == "list":
                 management_operations.print_employee_db()
             elif selection == "size":
-                print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-                print(f"The database holds {len(management_operations.employees_db)} entries.")
-                print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                management_operations.print_employee_db_size()
             elif selection == "id":
-                display_id = input("Please enter the ID you want to display: ")
-                if display_id.isdigit() and int(display_id) in management_operations.employees_db.keys():
-                    print(management_operations.employees_db[int(display_id)])
+                management_operations.print_id_details()
             elif selection == "exit":
                 break
 
